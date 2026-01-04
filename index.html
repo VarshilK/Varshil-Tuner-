@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Friend Tuner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="creator-badge">Created by Varshil</div>
+      <h1>Friend Tuner</h1>
+      <p class="subtitle">Wiggle level shows how out of tune you are.</p>
+
+      <section class="tuner" aria-label="Pitch tuner and metronome">
+        <section class="metronome" aria-label="Metronome">
+          <div id="metronome-easter-egg" class="metronome-easter-egg" aria-hidden="true">
+            Auf der Heide blüht ein kleines Blümelein
+          </div>
+          <div class="metronome-display" aria-live="polite">
+            <div class="metronome-label">Metronome</div>
+            <div class="metronome-bpm-box">
+              <span id="metronome-bpm">67</span>
+              <span class="metronome-unit">BPM</span>
+            </div>
+          </div>
+          <input
+            id="metronome-slider"
+            type="range"
+            min="67"
+            max="911"
+            value="67"
+          />
+          <div class="metronome-scale">
+            <span>67</span>
+            <span>Fast</span>
+            <span>911</span>
+          </div>
+          <div class="metronome-volume">
+            <label class="metronome-volume-label" for="metronome-volume-slider">Volume</label>
+            <input
+              id="metronome-volume-slider"
+              type="range"
+              min="0"
+              max="100"
+              value="60"
+            />
+          </div>
+        </section>
+
+        <label class="tuner-label" for="tuner-slider">
+          Pitch offset (cents)
+          <span id="tuner-value">0</span>
+        </label>
+        <input
+          id="tuner-slider"
+          type="range"
+          min="-50"
+          max="50"
+          value="0"
+        />
+        <div class="tuner-scale">
+          <span>-50</span>
+          <span>In tune</span>
+          <span>+50</span>
+        </div>
+        <div class="mic-controls">
+          <button id="mic-toggle" type="button">Use microphone</button>
+          <span id="mic-status" aria-live="polite"></span>
+        </div>
+      </section>
+
+      <section class="friends" aria-label="Friends reacting to tuning">
+        <div class="friend" data-name="Armaan">
+          <div class="face" data-friend="armaan"></div>
+          <div class="name">Armaan</div>
+        </div>
+        <div class="friend" data-name="Arnav">
+          <div class="face" data-friend="arnav"></div>
+          <div class="name">Arnav</div>
+        </div>
+        <div class="friend" data-name="Aryan">
+          <div class="face" data-friend="aryan"></div>
+          <div class="name">Aryan</div>
+        </div>
+        <div class="friend" data-name="Ishanth">
+          <div class="face" data-friend="ishanth">
+            <div class="ishanth-square"></div>
+            <div class="ishanth-label ishanth-label-top">{3</div>
+            <div class="ishanth-label ishanth-label-bottom">5}</div>
+          </div>
+          <div class="name">Ishanth</div>
+        </div>
+        <div class="friend" data-name="Rithik">
+          <div class="face" data-friend="rithik"></div>
+          <div class="name">Rithik</div>
+        </div>
+      </section>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
