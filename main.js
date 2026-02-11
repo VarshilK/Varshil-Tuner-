@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (bpm === 911) {
         titleEl.textContent = 'Erikan tuner';
       } else {
-        titleEl.textContent = defaultTitleText || 'Friend Tuner';
+        titleEl.textContent = defaultTitleText || 'Varshil Tuner';
       }
     }
   }
@@ -347,3 +347,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   requestAnimationFrame(tick);
 });
+
